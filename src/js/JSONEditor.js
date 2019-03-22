@@ -232,7 +232,7 @@ JSONEditor.prototype.setText = function (jsonText) {
  * @returns {String} jsonText
  */
 JSONEditor.prototype.getText = function () {
-  return JSON.stringify(this.json);
+  return this.json;
 };
 
 /**
