@@ -224,7 +224,7 @@ JSONEditor.prototype.get = function () {
  * @param {String | undefined} jsonText
  */
 JSONEditor.prototype.setText = function (jsonText) {
-  this.json = util.parse(jsonText);
+  this.json = jsonText;
 };
 
 /**
