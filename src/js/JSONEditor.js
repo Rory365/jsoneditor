@@ -280,6 +280,10 @@ JSONEditor.prototype.setMode = function (mode) {
       name = this.getName();
       data = this[asText ? 'getText' : 'get'](); // get text or json
 
+      if(data == {}) {
+        data = "";
+      }
+      
       this.destroy();
       util.clear(this);
       util.extend(this, config.mixin);
