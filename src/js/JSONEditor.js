@@ -280,7 +280,9 @@ JSONEditor.prototype.setMode = function (mode) {
       name = this.getName();
       data = this[asText ? 'getText' : 'get'](); // get text or json
 
-      if(data == {}) {
+      var isObj = !Object.keys(data).length
+
+      if(data == {} || isObj) {
         data = "";
       }
       
